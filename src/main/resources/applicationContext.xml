@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+   
+    <bean id="donorValidator" class="edu.neu.finalproject.validator.DonorValidator"></bean>
+    <bean id="requesterValidator" class="edu.neu.finalproject.validator.RequesterValidator"></bean>
+    <bean id="loginValidator" class="edu.neu.finalproject.validator.LoginValidator"></bean>
+    <bean id="userRUValidator" class="edu.neu.finalproject.validator.RequesterUpdateValidator"></bean>
+    <bean id="userUValidator" class="edu.neu.finalproject.validator.DonorUpdateValidator"></bean>
+    <bean id="vaccineValidator" class="edu.neu.finalproject.validator.VaccineValidator"></bean>
+    
+    <bean id="dao" class="edu.neu.finalproject.dao.DAO" />
+    <bean id="personDao" class="edu.neu.finalproject.dao.PersonDAO" />
+    <bean id="requestDao" class="edu.neu.finalproject.dao.RequestDAO"/>
+    <bean id="vaccineDAO" class="edu.neu.finalproject.dao.VaccineDAO"/>
+    <bean id="acceptedRequestDAO" class="edu.neu.finalproject.dao.AcceptedRequestDAO"/>
+    
+    <bean id="person" class="edu.neu.finalproject.pojo.Person" />
+    <bean id="vaccine" class="edu.neu.finalproject.pojo.Vaccine" />
+    <bean id="vaccineProvider" class="edu.neu.finalproject.pojo.VaccineProvider"/>
+    <bean id="vaccineRequester" class="edu.neu.finalproject.pojo.VaccineRequester"/>
+    <bean id="requestAdvert" class="edu.neu.finalproject.pojo.RequestAdvert"/>
+    <bean id="acceptedRequests" class="edu.neu.finalproject.pojo.AcceptedRequests"/>
+    
+</beans>
